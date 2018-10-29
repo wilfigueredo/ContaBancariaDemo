@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{57973947-358B-4A0A-9A70-B8E1E5AA502F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Services", "{DC0396E8-C004-43FB-B259-4F05402CB74E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Application", "3 - Application", "{E4A6B1F6-098C-49A3-AB43-B46B34DF7131}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{4DE15E64-A8C2-4630-BD89-867E1CB7F939}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{B612F9CD-0DB0-4D1F-9883-DC26A937E43E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - Data", "5.1 - Data", "{9218D2EE-0BA0-421B-88AF-3C9AAD5984FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 - CrossCutting", "5.2 - CrossCutting", "{2D9661B8-12FC-47AF-8506-388B1FF0370B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF.ContaBancaria.UI.Web", "src\WF.ContaBancaria.UI.Web\WF.ContaBancaria.UI.Web.csproj", "{737C3BFA-E36A-48A3-9AB7-699ADAE795E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF.ContaBancaria.Domain", "src\WF.ContaBancaria.Domain\WF.ContaBancaria.Domain.csproj", "{F15DBBE1-CEF7-4E4D-9BD7-B2809F3E647D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF.ContaBancaria.Infra.Data", "src\WF.ContaBancaria.Infra.Data\WF.ContaBancaria.Infra.Data.csproj", "{383AEE22-07D7-4E3A-8BA9-2717AB2B2166}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF.ContaBancaria.infra.CrossCuting.IoC", "src\WF.ContaBancaria.infra.CrossCuting.IoC\WF.ContaBancaria.infra.CrossCuting.IoC.csproj", "{AD75793A-2F01-444D-A775-178E039646B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF.ContaBancaria.Application", "src\WF.ContaBancaria.Application\WF.ContaBancaria.Application.csproj", "{DC350B5B-3009-4C7D-B6D0-94570D69CDFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF.ContaBancaria.Services.REST.API", "src\WF.ContaBancaria.Services.REST.API\WF.ContaBancaria.Services.REST.API.csproj", "{24F43D6B-6DE1-4B14-AD20-99C0E3A44E0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{737C3BFA-E36A-48A3-9AB7-699ADAE795E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{737C3BFA-E36A-48A3-9AB7-699ADAE795E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{737C3BFA-E36A-48A3-9AB7-699ADAE795E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{737C3BFA-E36A-48A3-9AB7-699ADAE795E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F15DBBE1-CEF7-4E4D-9BD7-B2809F3E647D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F15DBBE1-CEF7-4E4D-9BD7-B2809F3E647D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F15DBBE1-CEF7-4E4D-9BD7-B2809F3E647D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F15DBBE1-CEF7-4E4D-9BD7-B2809F3E647D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{383AEE22-07D7-4E3A-8BA9-2717AB2B2166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{383AEE22-07D7-4E3A-8BA9-2717AB2B2166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{383AEE22-07D7-4E3A-8BA9-2717AB2B2166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{383AEE22-07D7-4E3A-8BA9-2717AB2B2166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD75793A-2F01-444D-A775-178E039646B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD75793A-2F01-444D-A775-178E039646B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD75793A-2F01-444D-A775-178E039646B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD75793A-2F01-444D-A775-178E039646B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC350B5B-3009-4C7D-B6D0-94570D69CDFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC350B5B-3009-4C7D-B6D0-94570D69CDFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC350B5B-3009-4C7D-B6D0-94570D69CDFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC350B5B-3009-4C7D-B6D0-94570D69CDFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24F43D6B-6DE1-4B14-AD20-99C0E3A44E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24F43D6B-6DE1-4B14-AD20-99C0E3A44E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24F43D6B-6DE1-4B14-AD20-99C0E3A44E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24F43D6B-6DE1-4B14-AD20-99C0E3A44E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9218D2EE-0BA0-421B-88AF-3C9AAD5984FF} = {B612F9CD-0DB0-4D1F-9883-DC26A937E43E}
+		{2D9661B8-12FC-47AF-8506-388B1FF0370B} = {B612F9CD-0DB0-4D1F-9883-DC26A937E43E}
+		{737C3BFA-E36A-48A3-9AB7-699ADAE795E6} = {57973947-358B-4A0A-9A70-B8E1E5AA502F}
+		{F15DBBE1-CEF7-4E4D-9BD7-B2809F3E647D} = {4DE15E64-A8C2-4630-BD89-867E1CB7F939}
+		{383AEE22-07D7-4E3A-8BA9-2717AB2B2166} = {9218D2EE-0BA0-421B-88AF-3C9AAD5984FF}
+		{AD75793A-2F01-444D-A775-178E039646B3} = {2D9661B8-12FC-47AF-8506-388B1FF0370B}
+		{DC350B5B-3009-4C7D-B6D0-94570D69CDFC} = {E4A6B1F6-098C-49A3-AB43-B46B34DF7131}
+		{24F43D6B-6DE1-4B14-AD20-99C0E3A44E0A} = {DC0396E8-C004-43FB-B259-4F05402CB74E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACD372CB-0DDD-4D9F-AC3E-6D0129D2DC88}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,64 @@
+﻿@model WF.ContaBancaria.Application.ViewModels.ExtratoPeriodoViewModel
+@{
+    ViewBag.Title = "Extrato por periodo";
+}
+
+<h2>Extrato por periodo</h2>
+
+
+<div class="container" style="margin-top:1%;">
+    <div class="row">
+        <div class="">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">@Model.Nome</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        @using (@Html.BeginForm("ConsultarExtratoPeriodo", "Conta"))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.HiddenFor(item => item.Id);
+                        <div class=" col-md-9 col-lg-9 ">
+                            <table class="table table-user-information">
+                                <tbody>
+                                    <tr>
+                                        <td>Data Inicial:</td>
+                                        <td>@Html.EditorFor(item => item.DataInicial)</td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>Data Final</td>
+                                        <td>@Html.EditorFor(item => item.DataFinal)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="submit" id="consultar" value="Consultar" class="btn btn-default" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        }
+                    </div>
+                </div>
+                <div id="carregar"></div>
+            </div>
+        </div>        
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+<script>
+
+    $(function () {
+        $(".consultar").click(function () {
+            $("#carregar").load("Conta/ConsultarExtratoPeriodo", $("#form").serialize(), function () {
+                $("#carregar").data();
+            })
+        });
+    }) 
+
+</script>

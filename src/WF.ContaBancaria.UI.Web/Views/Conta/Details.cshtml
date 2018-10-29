@@ -1,0 +1,64 @@
+﻿@model WF.ContaBancaria.Application.ViewModels.ContaViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Conta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Saldo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Saldo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LimiteSaqueDiario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LimiteSaqueDiario)
+        </dd>             
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoConta)
+        </dt>
+
+        <dd>
+            @if (Model.TipoConta == 0)
+            {
+                <p>Conta Corrente</p>
+            }
+            else
+            {
+                <p>Conta Poupança</p>
+            }
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt> 
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Edit", "Conta", new {id = Model.Id})" data-modal="" class="btn btn-primary">
+        <span title="Editar" class="glyphicon glyphicon-pencil"></span>
+    </a>
+    <a href="@Url.Action("Index")" class="btn btn-warning">Voltar</a>
+</p>

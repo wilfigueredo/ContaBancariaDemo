@@ -1,0 +1,78 @@
+﻿@model WF.ContaBancaria.Application.ViewModels.DepositoViewModel
+@{
+    ViewBag.Title = "Deposito";
+}
+
+<h2>Deposito</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(item => item.Id)
+    @Html.HiddenFor(item => item.Saldo)
+    @Html.HiddenFor(item => item.LimiteSaqueDiario)
+
+    <div class="form-horizontal">
+        <h4>Informe o valor do deposito</h4>
+        <hr />
+        @Html.Partial("_ErrorSummary")
+        @Html.Partial("_Success")
+        <div class="form-group">
+            @Html.LabelFor(model => model.Pessoa.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" style="margin-top:1%;">
+                @Html.DisplayFor(model => model.Pessoa.Nome, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Saldo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" style="margin-top:1%;">
+                @Html.DisplayFor(model => model.Saldo, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LimiteSaqueDiario, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" style="margin-top:1%;">
+                @Html.DisplayFor(model => model.LimiteSaqueDiario, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TipoConta, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" style="margin-top:1%;">
+                @if (Model.TipoConta == 0)
+                {
+                    <p>Conta Corrente</p>
+                }
+                else
+                {
+                    <p>Conta Poupança</p>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ValorDeposito, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.ValorDeposito, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Depositar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    <a href="@Url.Action("Index")" class="btn btn-warning">Voltar</a>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+@Scripts.Render("~/bundles/jquery")

@@ -1,0 +1,80 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<WF.ContaBancaria.Application.ViewModels.ExtratoViewModel>
+
+<h2>Extrato Por Periodo</h2>
+<hr />
+
+<table class="table">
+    <tr>
+        <th class="text-center">
+            Seq
+        </th>
+        <th class="text-center">
+            Descrição
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Contas.TipoConta)
+        </th>
+
+        <th></th>
+    </tr>
+    @{
+        int i = 0;
+    }
+    @foreach (var item in Model)
+    {
+        {
+            i++;
+
+        }
+        <tr>
+            <td class="text-center">
+                @i
+            </td>
+            <td class="text-center">
+                @if (item.Valor < 0)
+                {
+
+                    <p>Saque de R$ @item.Valor,00</p>
+                }
+                else
+                {
+                    <p>Deposito no valor de R$ @item.Valor,00</p>
+                }
+            </td>
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.DataCadastro)
+            </td>
+            <td class="text-center">
+                @if (item.Contas.TipoConta == 0)
+                {
+                    <p>Conta Corrente</p>
+                }
+                else
+                {
+                    <p>Conta Poupança</p>
+                }
+            </td>
+        </tr>
+    }
+
+    <tfoot>
+        <tr>
+        @if (Model.Count() > 0)
+        {
+            <td>Saldo disponivel R$ @Model.ElementAt(0).Contas.Saldo,00</td>
+        }
+        else
+        {
+            <td>Não há transações</td>
+        }
+        </tr>
+    </tfoot>
+
+</table>
+
