@@ -15,7 +15,8 @@ C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.infra.Cros
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.infra.CrossCuting.IoC\bin\Debug\AutoMapper.xml
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.infra.CrossCuting.IoC\bin\Debug\EntityFramework.xml
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.infra.CrossCuting.IoC\bin\Debug\Dapper.xml
-C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.infra.CrossCuting.IoC\obj\Debug\WF.ContaBancaria.infra.CrossCuting.IoC.csprojResolveAssemblyReference.cache
+C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.infra.CrossCuting.IoC\obj\Debug\WF.ContaBancaria.infra.CrossCuting.IoC.csprojAssemblyReference.cache
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.infra.CrossCuting.IoC\obj\Debug\WF.ContaBancaria.infra.CrossCuting.IoC.csproj.CoreCompileInputs.cache
+C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.infra.CrossCuting.IoC\obj\Debug\WF.ContaBancaria.infra.CrossCuting.IoC.csproj.CopyComplete
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.infra.CrossCuting.IoC\obj\Debug\WF.ContaBancaria.infra.CrossCuting.IoC.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.infra.CrossCuting.IoC\obj\Debug\WF.ContaBancaria.infra.CrossCuting.IoC.pdb

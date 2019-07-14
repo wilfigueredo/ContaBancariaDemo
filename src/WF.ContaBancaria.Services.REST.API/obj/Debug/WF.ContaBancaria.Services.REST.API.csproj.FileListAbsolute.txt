@@ -86,7 +86,8 @@ C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.R
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\pt-br\System.Net.Http.Formatting.resources.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\pt-br\System.Web.Http.resources.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\pt-br\System.Web.Http.WebHost.resources.dll
-C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\obj\Debug\WF.ContaBancaria.Services.REST.API.csprojResolveAssemblyReference.cache
+C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\obj\Debug\WF.ContaBancaria.Services.REST.API.csprojAssemblyReference.cache
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\obj\Debug\WF.ContaBancaria.Services.REST.API.csproj.CoreCompileInputs.cache
+C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\obj\Debug\WF.ContaBancaria.Services.REST.API.csproj.CopyComplete
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\obj\Debug\WF.ContaBancaria.Services.REST.PessoaAPI.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\obj\Debug\WF.ContaBancaria.Services.REST.PessoaAPI.pdb

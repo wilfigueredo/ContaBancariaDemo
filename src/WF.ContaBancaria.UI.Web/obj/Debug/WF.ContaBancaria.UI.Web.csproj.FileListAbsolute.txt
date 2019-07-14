@@ -115,7 +115,8 @@ C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\pt-br\System.Web.WebPages.Razor.resources.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\pt-br\System.Web.Optimization.resources.dll
-C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\obj\Debug\WF.ContaBancaria.UI.Web.csprojResolveAssemblyReference.cache
+C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\obj\Debug\WF.ContaBancaria.UI.Web.csprojAssemblyReference.cache
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\obj\Debug\WF.ContaBancaria.UI.Web.csproj.CoreCompileInputs.cache
+C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\obj\Debug\WF.ContaBancaria.UI.Web.csproj.CopyComplete
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\obj\Debug\WF.ContaBancaria.UI.Web.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\obj\Debug\WF.ContaBancaria.UI.Web.pdb

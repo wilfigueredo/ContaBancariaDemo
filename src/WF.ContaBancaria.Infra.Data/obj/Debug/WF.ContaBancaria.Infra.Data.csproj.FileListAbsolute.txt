@@ -12,7 +12,8 @@ C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Infra.Data
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Infra.Data\bin\Debug\Dapper.xml
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Infra.Data\bin\Debug\EntityFramework.xml
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Infra.Data\obj\Debug\WF.ContaBancaria.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Infra.Data\obj\Debug\WF.ContaBancaria.Infra.Data.csprojAssemblyReference.cache
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Infra.Data\obj\Debug\WF.ContaBancaria.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Infra.Data\obj\Debug\WF.ContaBancaria.Infra.Data.csproj.CopyComplete
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Infra.Data\obj\Debug\WF.ContaBancaria.Infra.Data.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Infra.Data\obj\Debug\WF.ContaBancaria.Infra.Data.pdb
