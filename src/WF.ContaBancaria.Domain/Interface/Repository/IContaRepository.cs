@@ -12,7 +12,7 @@ namespace WF.ContaBancaria.Domain.Interface.Repository
         Conta Depositar(Conta conta, double valor);
         IEnumerable<Conta> ObterPorSaldo(double valor);
         Conta Sacar(Conta conta, double valor);
-        void RemoverContaPessoa(Guid Id);
+        void RemoverContaCliente(Guid Id);
         void BloquearConta(Guid Id);
         void AtivarConta(Guid Id);
     }

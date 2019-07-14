@@ -25,6 +25,6 @@ namespace WF.ContaBancaria.Application.ViewModels
 
         [ScaffoldColumn(false)]
         public DomainValidation.Validation.ValidationResult ValidationResult { get; set; }
-        public virtual PessoaViewModel Pessoa { get; set; }
+        public virtual ClienteViewModel Cliente { get; set; }
     }
 }

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace WF.ContaBancaria.Domain.Interface.Service
 {
-    public interface IPessoaService : IDisposable
+    public interface IClienteService : IDisposable
     {
-        Pessoa Adicionar(Pessoa pessoa);
-        Pessoa Atualizar(Pessoa pessoa);
+        Cliente Adicionar(Cliente Cliente);
+        Cliente Atualizar(Cliente Cliente);
     }
 }

@@ -1,3 +1,5 @@
+C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\System.Web.Http.dll
+C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\System.Web.Http.xml
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\roslyn\csc.exe
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\roslyn\csc.exe.config
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\roslyn\csc.rsp
@@ -57,7 +59,6 @@ C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.R
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\SimpleInjector.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\SimpleInjector.Integration.WebApi.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\System.Net.Http.Formatting.dll
-C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\System.Web.Http.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\System.Web.Http.WebHost.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\WebActivator.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\WF.ContaBancaria.Application.dll
@@ -76,7 +77,6 @@ C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.R
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\SimpleInjector.Integration.WebApi.xml
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\Newtonsoft.Json.xml
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\System.Net.Http.Formatting.xml
-C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\System.Web.Http.xml
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\System.Web.Http.WebHost.xml
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\WF.ContaBancaria.Infra.Data.pdb
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Services.REST.API\bin\WF.ContaBancaria.Infra.Data.dll.config

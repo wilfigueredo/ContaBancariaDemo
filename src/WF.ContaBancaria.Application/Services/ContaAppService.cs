@@ -33,7 +33,7 @@ namespace WF.ContaBancaria.Application.Services
         {
             var conta = Mapper.Map<Conta>(contaViewModel);
 
-            var pessoaRet = _contaService.Adicionar(conta);
+            var ClienteRet = _contaService.Adicionar(conta);
 
             Commit();
 
@@ -44,7 +44,7 @@ namespace WF.ContaBancaria.Application.Services
         {
             var conta = Mapper.Map<Conta>(contaViewModel);
 
-            var pessoaRet = _contaService.Atualizar(conta);
+            var ClienteRet = _contaService.Atualizar(conta);
 
             Commit();
 
@@ -154,7 +154,7 @@ namespace WF.ContaBancaria.Application.Services
             var conta = _contaRepository.ObterPorId(Id);
             ExtratoPeriodoViewModel extratoPeriodo = new ExtratoPeriodoViewModel();
             extratoPeriodo.Id = conta.Id;
-            extratoPeriodo.Nome = conta.Pessoa.Nome;
+            extratoPeriodo.Nome = conta.Cliente.Nome;
             return extratoPeriodo;
         }
 

@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="WF.ContaBancaria.Services.REST.PessoaAPI.WebApiApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="WF.ContaBancaria.Services.REST.ClienteAPI.WebApiApplication" Language="C#" %>

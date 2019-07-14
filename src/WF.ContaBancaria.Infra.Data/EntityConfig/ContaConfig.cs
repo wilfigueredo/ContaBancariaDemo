@@ -27,9 +27,9 @@ namespace WF.ContaBancaria.Infra.Data.EntityConfig
                 .IsRequired();
 
             // Mapeamento relacionamento 0 or 1 To 0 or 1 
-            HasOptional(c => c.Pessoa)
+            HasOptional(c => c.Cliente)
                 .WithMany()
-                .HasForeignKey(c => c.PessoaId);
+                .HasForeignKey(c => c.ClienteId);
 
             Ignore(c => c.ValidationResult);
 

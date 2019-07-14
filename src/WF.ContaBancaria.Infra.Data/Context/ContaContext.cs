@@ -22,7 +22,7 @@ namespace WF.ContaBancaria.Infra.Data.Context
 
         public DbSet<Conta> Contas { get; set; }
         public DbSet<Transacoes> Transacoes { get; set; }
-        public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -35,7 +35,7 @@ namespace WF.ContaBancaria.Infra.Data.Context
 
             modelBuilder.Configurations.Add(new ContaConfig());
             modelBuilder.Configurations.Add(new TransacoesConfig());
-            modelBuilder.Configurations.Add(new PessoaConfig());
+            modelBuilder.Configurations.Add(new ClienteConfig());
 
             base.OnModelCreating(modelBuilder);
         }

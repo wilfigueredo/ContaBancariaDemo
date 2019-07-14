@@ -20,13 +20,13 @@ namespace WF.ContaBancaria.Infra.Data.Repository
         {
             var sql = @"SELECT * FROM dbo.Transacoes T " +
                        "INNER JOIN dbo.Contas C ON T.ContaId = C.Id " +
-                       "LEFT JOIN dbo.Pessoas P ON C.PessoaId = P.Id " +
+                       "LEFT JOIN dbo.Clientes P ON C.ClienteId = P.Id " +
                        "WHERE ContaId = @sid";
 
             var transacoesList = new List<Transacoes>();
 
-            Db.Database.Connection.Query<Transacoes, Conta, Pessoa, List<Transacoes>>(sql, (t, c, p) =>
-            { c.Pessoa = p; t.Contas = c; transacoesList.Add(t); return transacoesList.ToList(); }, new { @sid = Id });
+            Db.Database.Connection.Query<Transacoes, Conta, Cliente, List<Transacoes>>(sql, (t, c, p) =>
+            { c.Cliente = p; t.Contas = c; transacoesList.Add(t); return transacoesList.ToList(); }, new { @sid = Id });
 
             return transacoesList;            
         }
@@ -35,14 +35,14 @@ namespace WF.ContaBancaria.Infra.Data.Repository
         {
             var sql = @"SELECT * FROM dbo.Transacoes T " +
                        "INNER JOIN dbo.Contas C ON T.ContaId = C.Id " +
-                       "LEFT JOIN dbo.Pessoas P ON C.PessoaId = P.Id " +
+                       "LEFT JOIN dbo.Clientes P ON C.ClienteId = P.Id " +
                        "WHERE ContaId = @sid AND T.DataCadastro >= @sdataIni " +
                        "AND T.DataCadastro <= @sdataFim";
 
             var transacoesList = new List<Transacoes>();
 
-            Db.Database.Connection.Query<Transacoes, Conta, Pessoa, List<Transacoes>>(sql, (t, c, p) =>
-            { c.Pessoa = p; t.Contas = c; transacoesList.Add(t); return transacoesList.ToList(); }, new { @sid = Id, @sdataIni = dataInicial, @sdataFim = dataFinal });
+            Db.Database.Connection.Query<Transacoes, Conta, Cliente, List<Transacoes>>(sql, (t, c, p) =>
+            { c.Cliente = p; t.Contas = c; transacoesList.Add(t); return transacoesList.ToList(); }, new { @sid = Id, @sdataIni = dataInicial, @sdataFim = dataFinal });
 
             return transacoesList;
         }

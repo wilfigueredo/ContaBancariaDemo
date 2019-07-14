@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace WF.ContaBancaria.Services.REST.PessoaAPI
+namespace WF.ContaBancaria.Services.REST.ClienteAPI
 {
     public static class WebApiConfig
     {

@@ -7,7 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace WF.ContaBancaria.Services.REST.PessoaAPI.Controllers
+namespace WF.ContaBancaria.Services.REST.ClienteAPI.Controllers
 {
     [RoutePrefix("api/contas")]
     public class ContasController : ApiController

@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
 
-namespace WF.ContaBancaria.Services.REST.PessoaAPI
+namespace WF.ContaBancaria.Services.REST.ClienteAPI
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

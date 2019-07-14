@@ -17,14 +17,14 @@ namespace WF.ContaBancaria.infra.CrossCuting.IoC
         {
             //APP
             container.Register<IContaAppService,ContaAppService>(Lifestyle.Scoped);
-            container.Register<IPessoaAppService, PessoaAppService>(Lifestyle.Scoped);
+            container.Register<IClienteAppService, ClienteAppService>(Lifestyle.Scoped);
 
             //Domain
-            container.Register<IPessoaService,PessoaService>(Lifestyle.Scoped);
+            container.Register<IClienteService,ClienteService>(Lifestyle.Scoped);
             container.Register<IContaService, ContaService>(Lifestyle.Scoped);
 
             //Infra
-            container.Register<IPessoaRepository, PessoaRepository>(Lifestyle.Scoped);
+            container.Register<IClienteRepository, ClienteRepository>(Lifestyle.Scoped);
             container.Register<ITransacoesRepository, TransacoesRepository>(Lifestyle.Scoped);
             container.Register<IContaRepository, ContaRepository>(Lifestyle.Scoped);
             container.Register<IUnitOfWork, UnitOfWork>(Lifestyle.Scoped);

@@ -54,9 +54,9 @@ namespace WF.ContaBancaria.Domain.Services
             return !conta.ValidationResult.IsValid ? conta : _contaRepository.Depositar(conta, transacoes.Valor);
         }
 
-        public void RemoverContaPessoa(Guid Id)
+        public void RemoverContaCliente(Guid Id)
         {
-            _contaRepository.RemoverContaPessoa(Id);
+            _contaRepository.RemoverContaCliente(Id);
         }
 
         public void Dispose()

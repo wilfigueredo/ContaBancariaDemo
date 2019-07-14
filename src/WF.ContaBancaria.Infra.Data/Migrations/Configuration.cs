@@ -18,13 +18,13 @@ namespace WF.ContaBancaria.Infra.Data.Migrations
         protected override void Seed(ContaContext context)
         {
            
-            IList<Pessoa> pessoas = new List<Pessoa>();
+            IList<Cliente> Clientes = new List<Cliente>();
             DateTime DataNasc = new DateTime(1988, 6, 1);
-            pessoas.Add(new Pessoa { Nome = "William", CPF = "12345678911", DataNascimento = DataNasc });
+            Clientes.Add(new Cliente { Nome = "William", CPF = "12345678911", DataNascimento = DataNasc });
 
-            foreach(var pessoa in pessoas)
+            foreach(var Cliente in Clientes)
             { 
-                context.Pessoas.AddOrUpdate(p => p.Id, pessoa);
+                context.Clientes.AddOrUpdate(p => p.Id, Cliente);
             }
             context.SaveChanges();
         }

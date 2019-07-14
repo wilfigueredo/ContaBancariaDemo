@@ -1,3 +1,6 @@
+C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\Newtonsoft.Json.xml
+C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\pt-br\System.Web.Optimization.resources.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\roslyn\csc.exe
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\roslyn\csc.exe.config
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\roslyn\csc.rsp
@@ -53,7 +56,6 @@ C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\DomainValidation.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\EntityFramework.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\EntityFramework.SqlServer.dll
-C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\Microsoft.AI.DependencyCollector.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\Microsoft.AI.PerfCounterCollector.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
@@ -97,7 +99,6 @@ C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\System.Web.WebPages.Razor.xml
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\System.Web.Optimization.xml
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\Antlr3.Runtime.pdb
-C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\Newtonsoft.Json.xml
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\Microsoft.ApplicationInsights.xml
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
@@ -114,7 +115,6 @@ C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\pt-br\System.Web.WebPages.resources.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\pt-br\System.Web.WebPages.Razor.resources.dll
-C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\bin\pt-br\System.Web.Optimization.resources.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\obj\Debug\WF.ContaBancaria.UI.Web.csprojAssemblyReference.cache
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\obj\Debug\WF.ContaBancaria.UI.Web.csproj.CoreCompileInputs.cache
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.UI.Web\obj\Debug\WF.ContaBancaria.UI.Web.csproj.CopyComplete

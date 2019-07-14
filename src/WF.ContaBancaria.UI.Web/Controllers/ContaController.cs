@@ -15,12 +15,12 @@ namespace WF.ContaBancaria.UI.Web.Controllers
     {
 
         private readonly IContaAppService _contaAppService;
-        private readonly IPessoaAppService _pessoaAppService;
+        private readonly IClienteAppService _ClienteAppService;
 
-        public ContaController(IContaAppService contaAppService, IPessoaAppService pessoaAppService)
+        public ContaController(IContaAppService contaAppService, IClienteAppService ClienteAppService)
         {
             _contaAppService = contaAppService;
-            _pessoaAppService = pessoaAppService;
+            _ClienteAppService = ClienteAppService;
         }
         // GET: Conta
         public ActionResult Index(string saldo)
@@ -50,7 +50,7 @@ namespace WF.ContaBancaria.UI.Web.Controllers
         // GET: Conta/Create
         public ActionResult Create()
         {
-            ViewBag.PessoaId = new SelectList(_pessoaAppService.ObterTodos(), "Id", "Nome");
+            ViewBag.ClienteId = new SelectList(_ClienteAppService.ObterTodos(), "Id", "Nome");
             return View();
         }
 
@@ -68,7 +68,7 @@ namespace WF.ContaBancaria.UI.Web.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.PessoaId = new SelectList(_contaAppService.ObterTodos(), "Id", "Nome", contaViewModel.PessoaId);
+            ViewBag.ClienteId = new SelectList(_contaAppService.ObterTodos(), "Id", "Nome", contaViewModel.ClienteId);
             return View(contaViewModel);
         }
 
@@ -84,7 +84,7 @@ namespace WF.ContaBancaria.UI.Web.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.PessoaId = new SelectList(_pessoaAppService.ObterTodos(), "Id", "Nome", contaViewModel.PessoaId);
+            ViewBag.ClienteId = new SelectList(_ClienteAppService.ObterTodos(), "Id", "Nome", contaViewModel.ClienteId);
             return View(contaViewModel);
         }
 
@@ -100,7 +100,7 @@ namespace WF.ContaBancaria.UI.Web.Controllers
                 _contaAppService.Atualizar(contaViewModel);
                 return RedirectToAction("Index");
             }
-            ViewBag.PessoaId = new SelectList(_pessoaAppService.ObterTodos(), "Id", "Nome", contaViewModel.PessoaId);
+            ViewBag.ClienteId = new SelectList(_ClienteAppService.ObterTodos(), "Id", "Nome", contaViewModel.ClienteId);
             return View(contaViewModel);
         }
 

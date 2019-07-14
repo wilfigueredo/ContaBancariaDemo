@@ -36,31 +36,31 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\Repository\IClienteRepository.cs" />
     <Compile Include="Interface\Repository\IContaRepository.cs" />
-    <Compile Include="Interface\Repository\IPessoaRepository.cs" />
     <Compile Include="Interface\Repository\IRepository.cs" />
     <Compile Include="Interface\Repository\IRepositoryWrite.cs" />
     <Compile Include="Interface\Repository\ITransacoesRepository.cs" />
     <Compile Include="Interface\Service\IContaService.cs" />
-    <Compile Include="Interface\Service\IPessoaService.cs" />
+    <Compile Include="Interface\Service\IClienteService.cs" />
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Conta.cs" />
     <Compile Include="Models\Entity.cs" />
-    <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Models\Transacoes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ClienteService.cs" />
     <Compile Include="Services\ContaService.cs" />
-    <Compile Include="Services\PessoaService.cs" />
+    <Compile Include="Specification\ClienteDevePossuirCpfUnicoSpecification.cs" />
+    <Compile Include="Specification\ClienteDeveTerCpfValidoSpecification.cs" />
     <Compile Include="Specification\ContaDeveEstarAtivaParaSaqueSpecification.cs" />
     <Compile Include="Specification\ContaDeveTerSaldoParaSaqueSpecification.cs" />
     <Compile Include="Specification\ContaDeveTerLimiteSaqueDiarioSpecification.cs" />
-    <Compile Include="Specification\PessoaDevePossuirCpfUnicoSpecification.cs" />
-    <Compile Include="Specification\PessoaDeveTerCpfValidoSpecification.cs" />
     <Compile Include="Specification\ValorParaDepositoDeveSerPositivoSpecification.cs" />
+    <Compile Include="Validation\ClienteAptoParaCadastroValidation.cs" />
+    <Compile Include="Validation\ClienteEstaConsistenteValidation.cs" />
     <Compile Include="Validation\ContaAptaParaDepositoValidation.cs" />
     <Compile Include="Validation\ContaAptaParaSaqueValidation.cs" />
     <Compile Include="Validation\ContaConsistenteParaTransacoesValidation.cs" />
-    <Compile Include="Validation\PessoaAptoParaCadastroValidation.cs" />
-    <Compile Include="Validation\PessoaEstaConsistenteValidation.cs" />
     <Compile Include="ValueObject\CPF.cs" />
   </ItemGroup>
   <ItemGroup />

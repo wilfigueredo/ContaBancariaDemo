@@ -38,9 +38,9 @@ namespace WF.ContaBancaria.Application.ViewModels
 
         [ScaffoldColumn(false)]
         public DateTime DataCadastro { get; set; }
-        public virtual Guid? PessoaId { get; set; }
+        public virtual Guid? ClienteId { get; set; }
         public virtual ICollection<TransacoesViewModel> Transacoes { get; set; }
-        public virtual PessoaViewModel Pessoa { get; set; }
+        public virtual ClienteViewModel Cliente { get; set; }
 
     }
 }

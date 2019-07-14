@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // As Informações Gerais sobre um assembly são controladas por meio do 
 // conjunto de atributos a seguir. Altere esses valores de atributo para modificar as informações
 // associadas a um assembly.
-[assembly: AssemblyTitle("WF.ContaBancaria.Services.REST.PessoaAPI")]
+[assembly: AssemblyTitle("WF.ContaBancaria.Services.REST.ClienteAPI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WF.ContaBancaria.Services.REST.PessoaAPI")]
+[assembly: AssemblyProduct("WF.ContaBancaria.Services.REST.ClienteAPI")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

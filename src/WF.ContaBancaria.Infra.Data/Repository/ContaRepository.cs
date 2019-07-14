@@ -20,12 +20,12 @@ namespace WF.ContaBancaria.Infra.Data.Repository
         public override IEnumerable<Conta> ObterTodos()
         {
             var sql = @"SELECT * FROM dbo.Contas C " +
-                        "LEFT JOIN dbo.Pessoas P ON C.PessoaId = P.Id ";
+                        "LEFT JOIN dbo.Clientes P ON C.ClienteId = P.Id ";
 
             var contasList = new List<Conta>();
 
-            Db.Database.Connection.Query<Conta, Pessoa, List<Conta>>(sql, (c, p) =>
-               { c.Pessoa = p; contasList.Add(c); return contasList.ToList(); });
+            Db.Database.Connection.Query<Conta, Cliente, List<Conta>>(sql, (c, p) =>
+               { c.Cliente = p; contasList.Add(c); return contasList.ToList(); });
             
             return contasList;
         }
@@ -33,13 +33,13 @@ namespace WF.ContaBancaria.Infra.Data.Repository
         public override Conta ObterPorId(Guid Id)
         {
             var sql = @"SELECT * FROM dbo.Contas C " +
-                        "LEFT JOIN dbo.Pessoas P ON C.PessoaId = P.Id " +
+                        "LEFT JOIN dbo.Clientes P ON C.ClienteId = P.Id " +
                         "WHERE c.Id = @sid";
 
             var contasList = new List<Conta>();
 
-            Db.Database.Connection.Query<Conta, Pessoa, List<Conta>>(sql, (c, p) =>
-            { c.Pessoa = p; contasList.Add(c); return contasList.ToList(); }, new { sid = Id });
+            Db.Database.Connection.Query<Conta, Cliente, List<Conta>>(sql, (c, p) =>
+            { c.Cliente = p; contasList.Add(c); return contasList.ToList(); }, new { sid = Id });
 
             return contasList.FirstOrDefault();
         }
@@ -47,13 +47,13 @@ namespace WF.ContaBancaria.Infra.Data.Repository
         public IEnumerable<Conta> ObterPorSaldo(double valor)
         {
             var sql = @"SELECT * FROM dbo.Contas C " +
-                        "LEFT JOIN dbo.Pessoas P ON C.PessoaId = P.Id " +
+                        "LEFT JOIN dbo.Clientes P ON C.ClienteId = P.Id " +
                         "WHERE c.Saldo = @svalor";
 
             var contasList = new List<Conta>();
 
-            Db.Database.Connection.Query<Conta, Pessoa, List<Conta>>(sql, (c, p) =>
-            { c.Pessoa = p; contasList.Add(c); return contasList.ToList(); }, new { svalor = valor });
+            Db.Database.Connection.Query<Conta, Cliente, List<Conta>>(sql, (c, p) =>
+            { c.Cliente = p; contasList.Add(c); return contasList.ToList(); }, new { svalor = valor });
 
             return contasList;
         }
@@ -97,10 +97,10 @@ namespace WF.ContaBancaria.Infra.Data.Repository
             Atualizar(conta);
         }        
 
-        public void RemoverContaPessoa(Guid Id)
+        public void RemoverContaCliente(Guid Id)
         {
             var sqlConta = @"SELECT C.Id FROM dbo.Contas C " +
-                            "WHERE C.PessoaId = @sid";            
+                            "WHERE C.ClienteId = @sid";            
 
            IEnumerable<Guid> IdContas =  Db.Database.Connection.Query<Guid>(sqlConta, new { sid = Id });
 

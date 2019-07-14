@@ -13,7 +13,7 @@ namespace WF.ContaBancaria.Application.AutoMapper
     {
         public DomainToViewModelMappingProfile()
         {
-            CreateMap<PessoaViewModel, Pessoa>().ReverseMap();
+            CreateMap<ClienteViewModel, Cliente>().ReverseMap();
             CreateMap<ContaViewModel, Conta>().ReverseMap();
             CreateMap<ContaViewModel, SaqueViewModel > ().ReverseMap();
             CreateMap<SaqueViewModel, Conta>().ReverseMap();

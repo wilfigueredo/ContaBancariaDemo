@@ -159,9 +159,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\ContaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -212,11 +212,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Pessoa\Create.cshtml" />
-    <Content Include="Views\Pessoa\Delete.cshtml" />
-    <Content Include="Views\Pessoa\Details.cshtml" />
-    <Content Include="Views\Pessoa\Edit.cshtml" />
-    <Content Include="Views\Pessoa\Index.cshtml" />
     <Content Include="Views\Shared\_Success.cshtml" />
     <Content Include="Views\Shared\_ErrorSummary.cshtml" />
     <Content Include="Views\Conta\Create.cshtml" />
@@ -229,11 +224,15 @@
     <Content Include="Views\Conta\ObterExtrato.cshtml" />
     <Content Include="Views\Conta\ExtratoPeriodo.cshtml" />
     <Content Include="Views\Conta\ConsultarExtratoPeriodo.cshtml" />
+    <Content Include="Views\Cliente\Create.cshtml" />
+    <Content Include="Views\Cliente\Delete.cshtml" />
+    <Content Include="Views\Cliente\Details.cshtml" />
+    <Content Include="Views\Cliente\Edit.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

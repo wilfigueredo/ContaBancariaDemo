@@ -1,6 +1,6 @@
-[assembly: WebActivator.PostApplicationStartMethod(typeof(WF.ContaBancaria.Services.REST.PessoaAPI.App_Start.SimpleInjectorWebApiInitializer), "Initialize")]
+[assembly: WebActivator.PostApplicationStartMethod(typeof(WF.ContaBancaria.Services.REST.ClienteAPI.App_Start.SimpleInjectorWebApiInitializer), "Initialize")]
 
-namespace WF.ContaBancaria.Services.REST.PessoaAPI.App_Start
+namespace WF.ContaBancaria.Services.REST.ClienteAPI.App_Start
 {
     using System.Web.Http;
     using SimpleInjector;

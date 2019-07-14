@@ -21,9 +21,9 @@ namespace WF.ContaBancaria.Domain.Models
         public bool Ativo { get; private set; }
         public int TipoConta { get; set; }
         public DateTime DataCadastro { get; set; }
-        public virtual Guid? PessoaId { get; set; }
+        public virtual Guid? ClienteId { get; set; }
         public virtual ICollection<Transacoes> Transacoes { get; set; }
-        public virtual Pessoa Pessoa { get; set; }
+        public virtual Cliente Cliente { get; set; }
 
         public ValidationResult ValidationResult { get; set; }
 
