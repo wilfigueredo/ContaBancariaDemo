@@ -11,16 +11,16 @@ namespace WF.ContaBancaria.Domain.Specification
 {
     public class ContaDeveTerSaldoParaSaqueSpecification : ISpecification<Transacoes>
     {
-        private readonly ITransacoesRepository _transacaoRepository;
+        private readonly IContaRepository _contaRepository;
 
-        public ContaDeveTerSaldoParaSaqueSpecification(ITransacoesRepository transacoesRepository)
+        public ContaDeveTerSaldoParaSaqueSpecification(IContaRepository contaRepository)
         {
-            _transacaoRepository = transacoesRepository;
+            _contaRepository = contaRepository;
         }
 
         public bool IsSatisfiedBy(Transacoes transacoes)
         {
-            return _transacaoRepository.TemSaldoParaSaque(transacoes);
+            return _contaRepository.ObterPorId(transacoes.ContaId).Saldo >= transacoes.Valor;
         }
     }
 }

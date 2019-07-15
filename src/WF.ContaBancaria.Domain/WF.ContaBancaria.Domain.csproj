@@ -36,6 +36,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enuns\TipoTransacao.cs" />
     <Compile Include="Interface\Repository\IClienteRepository.cs" />
     <Compile Include="Interface\Repository\IContaRepository.cs" />
     <Compile Include="Interface\Repository\IRepository.cs" />
@@ -55,12 +56,13 @@
     <Compile Include="Specification\ContaDeveEstarAtivaParaSaqueSpecification.cs" />
     <Compile Include="Specification\ContaDeveTerSaldoParaSaqueSpecification.cs" />
     <Compile Include="Specification\ContaDeveTerLimiteSaqueDiarioSpecification.cs" />
-    <Compile Include="Specification\ValorParaDepositoDeveSerPositivoSpecification.cs" />
+    <Compile Include="Specification\ValorNaoPodeSerIgualAZeroSpecification.cs" />
+    <Compile Include="Specification\ValorParaTransacaoDeveSerPositivoSpecification.cs" />
     <Compile Include="Validation\ClienteAptoParaCadastroValidation.cs" />
     <Compile Include="Validation\ClienteEstaConsistenteValidation.cs" />
-    <Compile Include="Validation\ContaAptaParaDepositoValidation.cs" />
-    <Compile Include="Validation\ContaAptaParaSaqueValidation.cs" />
-    <Compile Include="Validation\ContaConsistenteParaTransacoesValidation.cs" />
+    <Compile Include="Validation\TransacaoValidaValidation.cs" />
+    <Compile Include="Validation\SaqueEstaConsistenteValidation.cs" />
+    <Compile Include="Validation\ContaAptaParaTransacoesValidation.cs" />
     <Compile Include="ValueObject\CPF.cs" />
   </ItemGroup>
   <ItemGroup />

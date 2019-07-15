@@ -21,15 +21,13 @@ namespace WF.ContaBancaria.Domain.Models
         public bool Ativo { get; private set; }
         public int TipoConta { get; set; }
         public DateTime DataCadastro { get; set; }
-        public virtual Guid? ClienteId { get; set; }
-        public virtual ICollection<Transacoes> Transacoes { get; set; }
+        public virtual Guid? ClienteId { get; set; }        
         public virtual Cliente Cliente { get; set; }
-
-        public ValidationResult ValidationResult { get; set; }
+        public ValidationResult ValidationResult { get; set; }        
 
         public bool IsValid()
         {
-            ValidationResult = new ContaConsistenteParaTransacoesValidation().Validate(this);
+            ValidationResult = new ContaAptaParaTransacoesValidation().Validate(this);
             return ValidationResult.IsValid;
         }
         public void Ativar()
@@ -41,5 +39,28 @@ namespace WF.ContaBancaria.Domain.Models
         {
             Ativo = false;
         }
+
+        public void Depositar(Transacoes transacoes)
+        {
+            transacoes.ValidationResult = new TransacaoValidaValidation().Validate(transacoes);
+            ValidationResult = new ContaAptaParaTransacoesValidation().Validate(this);
+            if (ValidationResult.IsValid && transacoes.ValidationResult.IsValid)
+            {
+                this.Saldo += transacoes.Valor;
+                ValidationResult.Message = "Deposito realizado com sucesso";
+            }           
+        }
+
+        public void Sacar(Transacoes transacoes)
+        {
+            transacoes.ValidationResult = new TransacaoValidaValidation().Validate(transacoes);
+            ValidationResult = new ContaAptaParaTransacoesValidation().Validate(this);
+
+            if (ValidationResult.IsValid && transacoes.ValidationResult.IsValid)
+            {
+                this.Saldo += transacoes.Valor;
+                ValidationResult.Message = "Saque realizado com sucesso";
+            }
+        }        
     }
 }

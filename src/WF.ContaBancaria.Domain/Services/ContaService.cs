@@ -32,26 +32,25 @@ namespace WF.ContaBancaria.Domain.Services
             return _contaRepository.Atualizar(conta);
         }
 
-        public Conta Sacar(Conta conta, Transacoes transacoes)
+        public Conta Sacar(Conta conta, Transacoes transacao)
         {
-            if (!conta.IsValid())
+            conta.Sacar(transacao);
+            if (!conta.IsValid() || !transacao.ValidationResult.IsValid)
                 return conta;
 
-            conta.ValidationResult = new ContaAptaParaSaqueValidation(_transacoesRepository).Validate(transacoes);
+            conta.ValidationResult = new SaqueEstaConsistenteValidation(_contaRepository,_transacoesRepository).Validate(transacao);
                        
 
-            return !conta.ValidationResult.IsValid ? conta : _contaRepository.Sacar(conta,transacoes.Valor);
+            return !conta.ValidationResult.IsValid ? conta : _contaRepository.Atualizar(conta);
         }
 
-        public Conta Depositar(Conta conta, Transacoes transacoes)
+        public Conta Depositar(Conta conta, Transacoes transacao)
         {
+            conta.Depositar(transacao);
             if (!conta.IsValid())
-                return conta;
-
-            conta.ValidationResult = new ContaAptaParaDepositoValidation().Validate(transacoes);
-
-
-            return !conta.ValidationResult.IsValid ? conta : _contaRepository.Depositar(conta, transacoes.Valor);
+                return conta;           
+                        
+            return !conta.ValidationResult.IsValid ? conta : _contaRepository.Atualizar(conta);
         }
 
         public void RemoverContaCliente(Guid Id)
