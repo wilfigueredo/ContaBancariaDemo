@@ -41,10 +41,9 @@ namespace WF.ContaBancaria.Domain.Models
         }
 
         public void Depositar(Transacoes transacoes)
-        {
-            transacoes.ValidationResult = new TransacaoValidaValidation().Validate(transacoes);
+        {            
             ValidationResult = new ContaAptaParaTransacoesValidation().Validate(this);
-            if (ValidationResult.IsValid && transacoes.ValidationResult.IsValid)
+            if (ValidationResult.IsValid && transacoes.IsValid())
             {
                 this.Saldo += transacoes.Valor;
                 ValidationResult.Message = "Deposito realizado com sucesso";
@@ -52,11 +51,10 @@ namespace WF.ContaBancaria.Domain.Models
         }
 
         public void Sacar(Transacoes transacoes)
-        {
-            transacoes.ValidationResult = new TransacaoValidaValidation().Validate(transacoes);
+        {            
             ValidationResult = new ContaAptaParaTransacoesValidation().Validate(this);
 
-            if (ValidationResult.IsValid && transacoes.ValidationResult.IsValid)
+            if (ValidationResult.IsValid && transacoes.IsValid())
             {
                 this.Saldo += transacoes.Valor;
                 ValidationResult.Message = "Saque realizado com sucesso";

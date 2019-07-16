@@ -35,7 +35,7 @@ namespace WF.ContaBancaria.Domain.Services
         public Conta Sacar(Conta conta, Transacoes transacao)
         {
             conta.Sacar(transacao);
-            if (!conta.IsValid() || !transacao.ValidationResult.IsValid)
+            if (!conta.IsValid() || !transacao.IsValid())
                 return conta;
 
             conta.ValidationResult = new SaqueEstaConsistenteValidation(_contaRepository,_transacoesRepository).Validate(transacao);
@@ -47,7 +47,7 @@ namespace WF.ContaBancaria.Domain.Services
         public Conta Depositar(Conta conta, Transacoes transacao)
         {
             conta.Depositar(transacao);
-            if (!conta.IsValid())
+            if (!conta.IsValid() || !transacao.IsValid())
                 return conta;           
                         
             return !conta.ValidationResult.IsValid ? conta : _contaRepository.Atualizar(conta);

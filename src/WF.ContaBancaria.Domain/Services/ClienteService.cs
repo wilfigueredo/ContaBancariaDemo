@@ -25,7 +25,7 @@ namespace WF.ContaBancaria.Domain.Services
             if (!Cliente.IsValid())
                 return Cliente;
 
-            Cliente.ValidationResult = new ClienteAptoParaCadastroValidation(_ClienteRepository).Validate(Cliente);
+            Cliente.ValidationResult = new ClienteEstaConsistenteValidation(_ClienteRepository).Validate(Cliente);
 
             return !Cliente.ValidationResult.IsValid ? Cliente :  _ClienteRepository.Adicionar(Cliente);
         }

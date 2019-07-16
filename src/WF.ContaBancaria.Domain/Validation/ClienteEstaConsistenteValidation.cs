@@ -6,16 +6,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WF.ContaBancaria.Domain.Interface.Repository;
 
 namespace WF.ContaBancaria.Domain.Validation
 {
     public class ClienteEstaConsistenteValidation : Validator<Cliente>
     {
-        public ClienteEstaConsistenteValidation()
+        public ClienteEstaConsistenteValidation(IClienteRepository ClienteRepository)
         {
-            var CPFCliente = new ClienteDeveTerCpfValidoSpecification();
 
-            base.Add("CPFCliente", new Rule<Cliente>(CPFCliente, "Cliente informou um cpf inválido"));
+            var ClienteUnica = new ClienteDevePossuirCpfUnicoSpecification(ClienteRepository);
+
+            base.Add("ClienteUnica", new Rule<Cliente>(ClienteUnica, "Cliente com cpf já cadastrado no banco"));
+
+            
         }
     }
 }

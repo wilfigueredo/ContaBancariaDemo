@@ -44,6 +44,7 @@
     <Compile Include="Interface\Repository\ITransacoesRepository.cs" />
     <Compile Include="Interface\Service\IContaService.cs" />
     <Compile Include="Interface\Service\IClienteService.cs" />
+    <Compile Include="Interface\Service\ITransacaoService.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Conta.cs" />
     <Compile Include="Models\Entity.cs" />
@@ -51,7 +52,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ClienteService.cs" />
     <Compile Include="Services\ContaService.cs" />
+    <Compile Include="Services\TransacoesService.cs" />
     <Compile Include="Specification\ClienteDevePossuirCpfUnicoSpecification.cs" />
+    <Compile Include="Specification\ClienteDeveSerMaiorDeIdadeSpecification.cs" />
     <Compile Include="Specification\ClienteDeveTerCpfValidoSpecification.cs" />
     <Compile Include="Specification\ContaDeveEstarAtivaParaSaqueSpecification.cs" />
     <Compile Include="Specification\ContaDeveTerSaldoParaSaqueSpecification.cs" />

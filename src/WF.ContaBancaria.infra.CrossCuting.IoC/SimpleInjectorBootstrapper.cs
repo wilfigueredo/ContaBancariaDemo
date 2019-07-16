@@ -22,6 +22,7 @@ namespace WF.ContaBancaria.infra.CrossCuting.IoC
             //Domain
             container.Register<IClienteService,ClienteService>(Lifestyle.Scoped);
             container.Register<IContaService, ContaService>(Lifestyle.Scoped);
+            container.Register<ITransacaoService, TransacoesService>(Lifestyle.Scoped);
 
             //Infra
             container.Register<IClienteRepository, ClienteRepository>(Lifestyle.Scoped);

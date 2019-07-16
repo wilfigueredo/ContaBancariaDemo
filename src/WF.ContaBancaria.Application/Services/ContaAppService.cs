@@ -10,6 +10,7 @@ using WF.ContaBancaria.Domain.Interface.Repository;
 using WF.ContaBancaria.Domain.Interface.Service;
 using AutoMapper;
 using WF.ContaBancaria.Domain.Models;
+using WF.ContaBancaria.Domain.Enuns;
 
 namespace WF.ContaBancaria.Application.Services
 {
@@ -18,10 +19,12 @@ namespace WF.ContaBancaria.Application.Services
         private readonly IContaRepository _contaRepository;
         private readonly ITransacoesRepository _transacoesRepository;
         private readonly IContaService _contaService;
+        private readonly ITransacaoService _transacaoService;
 
         public ContaAppService(IContaRepository contaRepository,
                                IContaService contaService,
                                ITransacoesRepository transacoesRepository,
+                               ITransacaoService transacaoService,
                                IUnitOfWork uow) : base(uow)
         {
             _contaRepository = contaRepository;
@@ -53,7 +56,9 @@ namespace WF.ContaBancaria.Application.Services
 
         public void AtivarConta(Guid Id)
         {
-            _contaRepository.AtivarConta(Id);
+            var conta = _contaRepository.ObterPorId(Id);
+            conta.Ativar();
+            _contaRepository.Atualizar(conta);
             Commit();
         }
 
@@ -61,27 +66,27 @@ namespace WF.ContaBancaria.Application.Services
 
         public void BloquearConta(Guid Id)
         {
-            _contaRepository.BloquearConta(Id);
+            var conta = _contaRepository.ObterPorId(Id);
+            conta.Bloquear();
+            _contaRepository.Atualizar(conta);
             Commit();
         }
 
         public SaqueViewModel Sacar(SaqueViewModel saqueViewModel)
-        {
-            var conta = Mapper.Map<ContaViewModel>(saqueViewModel);
-            conta = ObterPorId(conta.Id);
-            var contaR = Mapper.Map<Conta>(conta);
-            Transacoes transacoes = new Transacoes();
-            transacoes.ContaId = conta.Id;
-            transacoes.Valor = saqueViewModel.ValorSaque;
+        {            
+            var conta = _contaRepository.ObterPorId(saqueViewModel.Id);
             
-            var contaRet = _contaService.Sacar(contaR,transacoes);
-            transacoes.Valor = transacoes.Valor * -1;
-            _transacoesRepository.Adicionar(transacoes);
+            Transacoes transacoes = new Transacoes(saqueViewModel.ValorSaque,TipoTransacao.Saque,conta.Id);
+             
+            var contaRet = _contaService.Sacar(conta,transacoes);
+            if (contaRet.ValidationResult.IsValid) {                 
+                _transacaoService.Adicionar(transacoes);                
+            }
 
-            if (contaR.ValidationResult.IsValid)
+            if (transacoes.ValidationResult.IsValid)
             { 
                 Commit();
-                contaR.ValidationResult.Message = "Saque realizado com sucesso!";
+                contaRet.ValidationResult.Message = "Saque realizado com sucesso!";
             }
            
             saqueViewModel = Mapper.Map<SaqueViewModel>(contaRet);
@@ -92,21 +97,21 @@ namespace WF.ContaBancaria.Application.Services
         public DepositoViewModel Depositar(DepositoViewModel depositoViewModel)
         {
 
-            var conta = Mapper.Map<ContaViewModel>(depositoViewModel);
-            conta = ObterPorId(conta.Id);
-            var contaR = Mapper.Map<Conta>(conta);
-            Transacoes transacoes = new Transacoes();
-            transacoes.ContaId = conta.Id;
-            transacoes.Valor = depositoViewModel.ValorDeposito;
-
-            var contaRet = _contaService.Depositar(contaR, transacoes);
+            var conta = _contaRepository.ObterPorId(depositoViewModel.Id);
+           
+            Transacoes transacoes = new Transacoes(depositoViewModel.ValorDeposito,TipoTransacao.Deposito,conta.Id);
             
-            _transacoesRepository.Adicionar(transacoes);
+            var contaRet = _contaService.Depositar(conta, transacoes);
+            if (contaRet.ValidationResult.IsValid)
+            {
+                _transacaoService.Adicionar(transacoes);
+            }
 
-            if (contaR.ValidationResult.IsValid)
+
+            if (transacoes.ValidationResult.IsValid)
             {
                 Commit();
-                contaR.ValidationResult.Message = "Deposito realizado com sucesso!";
+                contaRet.ValidationResult.Message = "Deposito realizado com sucesso!";
             }
 
             depositoViewModel = Mapper.Map<DepositoViewModel>(contaRet);

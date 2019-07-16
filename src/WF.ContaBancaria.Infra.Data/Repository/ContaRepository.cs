@@ -56,47 +56,8 @@ namespace WF.ContaBancaria.Infra.Data.Repository
             { c.Cliente = p; contasList.Add(c); return contasList.ToList(); }, new { svalor = valor });
 
             return contasList;
-        }
-
-        public Conta Sacar(Conta conta, double valor)
-        {
-            conta.Saldo -= valor;
-
-            Atualizar(conta);
-
-            return conta;
-        }
-
-        public Conta Depositar(Conta conta, double valor)
-        {            
-            
-            conta.Saldo += valor;
-
-            Atualizar(conta);
-
-            return conta;
-        }
-        
-
-        public void AtivarConta(Guid Id)
-        {
-            var conta = ObterPorId(Id);
-
-            conta.Ativar();
-
-            Atualizar(conta);
-            
-        }
-
-        public void BloquearConta(Guid Id)
-        {
-            var conta = ObterPorId(Id);
-
-            conta.Bloquear();
-
-            Atualizar(conta);
-        }        
-
+        }    
+              
         public void RemoverContaCliente(Guid Id)
         {
             var sqlConta = @"SELECT C.Id FROM dbo.Contas C " +

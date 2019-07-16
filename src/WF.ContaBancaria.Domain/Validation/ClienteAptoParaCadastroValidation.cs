@@ -12,11 +12,13 @@ namespace WF.ContaBancaria.Domain.Validation
 {
     public class ClienteAptoParaCadastroValidation : Validator<Cliente>
     {
-        public ClienteAptoParaCadastroValidation(IClienteRepository ClienteRepository)
+        public ClienteAptoParaCadastroValidation()
         {
-            var ClienteUnica = new ClienteDevePossuirCpfUnicoSpecification(ClienteRepository);
+            var CPFCliente = new ClienteDeveTerCpfValidoSpecification();
+            var clienteMaiorDeIdade = new ClienteDeveSerMaiorDeIdadeSpecification();
 
-            base.Add("ClienteUnica", new Rule<Cliente>(ClienteUnica, "Cliente com cpf já cadastrado no banco"));
+            base.Add("CPFCliente", new Rule<Cliente>(CPFCliente, "Cliente informou um cpf inválido"));
+            base.Add("clienteMaiorDeIdade", new Rule<Cliente>(clienteMaiorDeIdade, "Cliente informou um cpf inválido"));
         }
     }
 }

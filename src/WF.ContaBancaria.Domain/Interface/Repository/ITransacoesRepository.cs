@@ -10,8 +10,6 @@ namespace WF.ContaBancaria.Domain.Interface.Repository
     public interface ITransacoesRepository : IRepository<Transacoes>, IRepositoryWrite<Transacoes>
     {
         IEnumerable<Transacoes> ObterExtrato(Guid Id);
-        IEnumerable<Transacoes> ObterExtratoPeriodo(Guid Id, DateTime dataInicial, DateTime dataFinal);
-        bool TemSaldoParaSaque(Transacoes transacoes);
-        bool TemLimiteSaqueDiario(Transacoes transacoes);
+        IEnumerable<Transacoes> ObterExtratoPeriodo(Guid Id, DateTime dataInicial, DateTime dataFinal);        
     }
 }

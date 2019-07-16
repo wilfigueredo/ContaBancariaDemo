@@ -17,7 +17,7 @@ namespace WF.ContaBancaria.Domain.Models
 
         public bool IsValid()
         {
-            ValidationResult = new ClienteEstaConsistenteValidation().Validate(this);
+            ValidationResult = new ClienteAptoParaCadastroValidation().Validate(this);
             return ValidationResult.IsValid;
         }
     }

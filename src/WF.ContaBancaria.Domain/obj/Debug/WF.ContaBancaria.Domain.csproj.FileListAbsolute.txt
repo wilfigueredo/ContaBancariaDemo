@@ -6,3 +6,8 @@ C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Domain\obj
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Domain\obj\Debug\WF.ContaBancaria.Domain.dll
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Domain\obj\Debug\WF.ContaBancaria.Domain.pdb
 C:\Users\willliame\source\repos\ContaBancariaDDD\src\WF.ContaBancaria.Domain\obj\Debug\WF.ContaBancaria.Domain.csprojAssemblyReference.cache
+C:\Users\wsfigueiredo\Source\Repos\ContaBancariaDDD\src\WF.ContaBancaria.Domain\bin\Debug\WF.ContaBancaria.Domain.dll
+C:\Users\wsfigueiredo\Source\Repos\ContaBancariaDDD\src\WF.ContaBancaria.Domain\bin\Debug\WF.ContaBancaria.Domain.pdb
+C:\Users\wsfigueiredo\Source\Repos\ContaBancariaDDD\src\WF.ContaBancaria.Domain\bin\Debug\DomainValidation.dll
+C:\Users\wsfigueiredo\Source\Repos\ContaBancariaDDD\src\WF.ContaBancaria.Domain\obj\Debug\WF.ContaBancaria.Domain.dll
+C:\Users\wsfigueiredo\Source\Repos\ContaBancariaDDD\src\WF.ContaBancaria.Domain\obj\Debug\WF.ContaBancaria.Domain.pdb

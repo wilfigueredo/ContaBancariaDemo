@@ -18,9 +18,11 @@ namespace WF.ContaBancaria.Infra.Data.EntityConfig
                 .IsRequired();
 
             // Mapeamento 0 To N
-            HasRequired(t => t.Contas)
-                .WithMany(p => p.Transacoes)
+            HasRequired(t => t.Conta)
+                .WithMany()
                 .HasForeignKey(t => t.ContaId);
+
+            Ignore(c => c.ValidationResult);
 
             ToTable("Transacoes");
         }

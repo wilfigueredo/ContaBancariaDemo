@@ -8,12 +8,8 @@ using System.Threading.Tasks;
 namespace WF.ContaBancaria.Domain.Interface.Repository
 {
     public interface IContaRepository : IRepository<Conta>, IRepositoryWrite<Conta>
-    {         
-        Conta Depositar(Conta conta, double valor);
-        IEnumerable<Conta> ObterPorSaldo(double valor);
-        Conta Sacar(Conta conta, double valor);
-        void RemoverContaCliente(Guid Id);
-        void BloquearConta(Guid Id);
-        void AtivarConta(Guid Id);
+    {          
+        IEnumerable<Conta> ObterPorSaldo(double valor);        
+        void RemoverContaCliente(Guid Id);        
     }
 }

@@ -21,8 +21,11 @@ namespace WF.ContaBancaria.Domain.Specification
         }
         public bool IsSatisfiedBy(Transacoes transacoes)
         {
-            var transacoesDoDia = _transacoesRepository.Buscar(t => t.ContaId == transacoes.ContaId && t.DataCadastro == transacoes.DataCadastro && Convert.ToInt32(t.TipoTransacao) == 1).Sum(x => x.Valor);
+            var transacoesDoDia = _transacoesRepository.Buscar(t => t.ContaId == transacoes.ContaId
+                && t.DataCadastro == transacoes.DataCadastro
+                && Convert.ToInt32(t.TipoTransacao) == 1).Sum(x => x.Valor);
             var conta = _contaRepository.ObterPorId(transacoes.ContaId);
+
             return conta.LimiteSaqueDiario > transacoesDoDia + transacoes.Valor;
         }
     }
