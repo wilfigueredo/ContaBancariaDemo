@@ -30,6 +30,7 @@ namespace WF.ContaBancaria.Application.Services
             _contaRepository = contaRepository;
             _contaService = contaService;
             _transacoesRepository = transacoesRepository;
+            _transacaoService = transacaoService;
         }
 
         public ContaViewModel Adicionar(ContaViewModel contaViewModel)
@@ -79,18 +80,22 @@ namespace WF.ContaBancaria.Application.Services
             Transacoes transacoes = new Transacoes(saqueViewModel.ValorSaque,TipoTransacao.Saque,conta.Id);
              
             var contaRet = _contaService.Sacar(conta,transacoes);
+            saqueViewModel = Mapper.Map<SaqueViewModel>(contaRet);
             if (contaRet.ValidationResult.IsValid) {                 
-                _transacaoService.Adicionar(transacoes);                
+                _transacaoService.Adicionar(transacoes);
+            }
+            else
+            {
+                contaRet.ValidationResult.Message = "Ocorreu um erro ao sacar!";
+                return saqueViewModel;
             }
 
             if (transacoes.ValidationResult.IsValid)
             { 
                 Commit();
                 contaRet.ValidationResult.Message = "Saque realizado com sucesso!";
-            }
-           
-            saqueViewModel = Mapper.Map<SaqueViewModel>(contaRet);
-            
+            }       
+                        
             return saqueViewModel;
         }
 

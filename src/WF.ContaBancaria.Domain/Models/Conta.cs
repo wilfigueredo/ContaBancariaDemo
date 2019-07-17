@@ -14,13 +14,14 @@ namespace WF.ContaBancaria.Domain.Models
         {
             Saldo = 0.0;
             TipoConta = 0;
-            Ativar();
+            DataCadastro = DateTime.Now;
+
         }
         public double Saldo { get; set; }
         public double LimiteSaqueDiario { get; set; }
         public bool Ativo { get; private set; }
         public int TipoConta { get; set; }
-        public DateTime DataCadastro { get; set; }
+        public DateTime DataCadastro { get; private set; }
         public virtual Guid? ClienteId { get; set; }        
         public virtual Cliente Cliente { get; set; }
         public ValidationResult ValidationResult { get; set; }        
@@ -56,7 +57,7 @@ namespace WF.ContaBancaria.Domain.Models
 
             if (ValidationResult.IsValid && transacoes.IsValid())
             {
-                this.Saldo += transacoes.Valor;
+                this.Saldo -= transacoes.Valor;
                 ValidationResult.Message = "Saque realizado com sucesso";
             }
         }        

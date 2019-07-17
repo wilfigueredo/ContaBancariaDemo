@@ -62,8 +62,7 @@ namespace WF.ContaBancaria.UI.Web.Controllers
         public ActionResult Create(ContaViewModel contaViewModel)
         {
             if (ModelState.IsValid)
-            {
-                contaViewModel.Id = Guid.NewGuid();
+            {               
                 _contaAppService.Adicionar(contaViewModel);
                 return RedirectToAction("Index");
             }

@@ -26,6 +26,8 @@ namespace WF.ContaBancaria.Infra.Data.EntityConfig
             Property(c => c.TipoConta)
                 .IsRequired();
 
+            Property(c => c.DataCadastro).HasColumnType("datetime2");
+
             // Mapeamento relacionamento 0 or 1 To 0 or 1 
             HasOptional(c => c.Cliente)
                 .WithMany()

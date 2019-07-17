@@ -24,7 +24,12 @@ namespace WF.ContaBancaria.Domain.Services
             if (!transacoes.IsValid())
                 return transacoes;
 
-            return !transacoes.ValidationResult.IsValid ? transacoes : _transacoesRepository.Adicionar(transacoes);
+            if (transacoes.ValidationResult.IsValid) { 
+                transacoes.Valor = transacoes.Valor * -1;
+                return _transacoesRepository.Adicionar(transacoes);
+            }
+
+            return transacoes;
         }
 
         public void Dispose()

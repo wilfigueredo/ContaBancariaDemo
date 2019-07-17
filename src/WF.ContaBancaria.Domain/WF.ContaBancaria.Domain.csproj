@@ -34,6 +34,7 @@
       <HintPath>..\..\packages\DomainValidation.1.0.0\lib\net453\DomainValidation.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data.Entity" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enuns\TipoTransacao.cs" />

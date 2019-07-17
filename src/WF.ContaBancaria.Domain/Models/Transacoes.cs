@@ -13,15 +13,18 @@ namespace WF.ContaBancaria.Domain.Models
     {
         public Transacoes(double valor,TipoTransacao tipoTransacao,Guid contaId)
         {
-            if(tipoTransacao == TipoTransacao.Saque)
-                Valor = valor * -1;
-            Valor = valor;
+            Valor = valor;           
             TipoTransacao = tipoTransacao;
             ContaId = contaId;
             DataCadastro = DateTime.Now;
         }
 
-        public double Valor { get; private set; }
+        public Transacoes()
+        {
+
+        }
+
+        public double Valor { get; internal set; }
         public DateTime DataCadastro { get; private set; }
         public TipoTransacao TipoTransacao { get; set; }
         public Guid ContaId { get; set; }
