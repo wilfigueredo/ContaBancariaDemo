@@ -29,7 +29,7 @@ namespace WF.ContaBancaria.Domain.Specification
             
             var conta = _contaRepository.ObterPorId(transacoes.ContaId);
 
-            return conta.LimiteSaqueDiario >(transacoesDoDia * -1) + transacoes.Valor;
+            return conta.LimiteSaqueDiario >= (transacoesDoDia * -1) + transacoes.Valor;
         }
     }
 }

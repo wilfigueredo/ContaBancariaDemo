@@ -87,7 +87,7 @@ namespace WF.ContaBancaria.Application.Services
             else
             {
                 contaRet.ValidationResult.Message = "Ocorreu um erro ao sacar!";
-                return saqueViewModel;
+                return Mapper.Map<SaqueViewModel>(contaRet);
             }
 
             if (transacoes.ValidationResult.IsValid)
@@ -96,7 +96,7 @@ namespace WF.ContaBancaria.Application.Services
                 contaRet.ValidationResult.Message = "Saque realizado com sucesso!";
             }       
                         
-            return saqueViewModel;
+            return Mapper.Map<SaqueViewModel>(contaRet); 
         }
 
         public DepositoViewModel Depositar(DepositoViewModel depositoViewModel)
@@ -110,6 +110,11 @@ namespace WF.ContaBancaria.Application.Services
             if (contaRet.ValidationResult.IsValid)
             {
                 _transacaoService.Adicionar(transacoes);
+            }
+            else
+            {
+                contaRet.ValidationResult.Message = "Ocorreu um erro ao depositar!";
+                return Mapper.Map<DepositoViewModel>(contaRet);
             }
 
 
@@ -155,7 +160,7 @@ namespace WF.ContaBancaria.Application.Services
         }
 
         public IEnumerable<ExtratoViewModel> ObterExtrato(Guid Id)
-        {
+        {                  
             return Mapper.Map<IEnumerable<ExtratoViewModel>>(_transacoesRepository.ObterExtrato(Id));
         }
 

@@ -17,7 +17,7 @@ namespace WF.ContaBancaria.Domain.Validation
             var valorIgualAZero = new ValorNaoPodeSerIgualAZeroSpecification();
 
             base.Add("valorPositivo", new Rule<Transacoes>(valorPositivo, "Valor deve ser positivo"));
-            base.Add("valorIgualAZero", new Rule<Transacoes>(valorPositivo, "Valor não pode ser igual a zero"));
+            base.Add("valorIgualAZero", new Rule<Transacoes>(valorIgualAZero, "Valor não pode ser igual a zero"));
         }
     }
 }

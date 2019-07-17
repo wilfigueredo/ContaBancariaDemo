@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="AutoMapper\AutoMapperConfig.cs" />
     <Compile Include="AutoMapper\DomainToViewModelMappingProfile.cs" />
+    <Compile Include="Enuns\TipoTransacao.cs" />
     <Compile Include="Interface\IClienteAppService.cs" />
     <Compile Include="Interface\IContaAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

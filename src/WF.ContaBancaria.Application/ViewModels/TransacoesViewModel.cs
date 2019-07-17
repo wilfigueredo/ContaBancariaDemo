@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WF.ContaBancaria.Application.Enuns;
 
 namespace WF.ContaBancaria.Application.ViewModels
 {
@@ -18,7 +19,8 @@ namespace WF.ContaBancaria.Application.ViewModels
 
         [ScaffoldColumn(false)]
         public DateTime DataCadastro { get; set; }
-        
+        public TipoTransacao TipoTransacao { get; set; }
+
         public Guid ContaId { get; set; }
 
         public ContaViewModel Contas { get; set; }

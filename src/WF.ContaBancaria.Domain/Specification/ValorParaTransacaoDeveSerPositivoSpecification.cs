@@ -12,7 +12,7 @@ namespace WF.ContaBancaria.Domain.Specification
     {
         public bool IsSatisfiedBy(Transacoes transacoes)
         {
-            return transacoes.Valor > 0;
+            return transacoes.Valor >= 0;
         }
     }
 }

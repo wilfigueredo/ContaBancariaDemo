@@ -17,6 +17,12 @@ namespace WF.ContaBancaria.Domain.Models
             DataCadastro = DateTime.Now;
 
         }
+
+        public Conta(double saldo, double limiteSaqueDiario)
+        {
+            Saldo = saldo;
+            LimiteSaqueDiario = limiteSaqueDiario;            
+        }
         public double Saldo { get; set; }
         public double LimiteSaqueDiario { get; set; }
         public bool Ativo { get; private set; }

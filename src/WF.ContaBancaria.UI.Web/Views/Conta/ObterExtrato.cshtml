@@ -7,7 +7,7 @@
 <h2>Extrato</h2>
 
 @if(Model.Count() > 0) { 
-    <h4>@Model.ElementAt(0).Contas.Cliente.Nome</h4>
+    <h4>@Model.ElementAt(0).Conta.Cliente.Nome</h4>
 }
 
 <table class="table">
@@ -22,7 +22,7 @@
             @Html.DisplayNameFor(model => model.DataCadastro)
         </th>
         <th class="text-center">
-            @Html.DisplayNameFor(model => model.Contas.TipoConta)
+            @Html.DisplayNameFor(model => model.Conta.TipoConta)
         </th>
 
         <th></th>
@@ -41,7 +41,7 @@
                 @i
             </td>
             <td class="text-center">
-                @if (item.Valor < 0)
+                @if ((int)item.TipoTransacao == 1)
                 {
                     
                     <p>Saque de R$ @item.Valor,00</p>
@@ -55,7 +55,7 @@
                 @Html.DisplayFor(modelItem => item.DataCadastro)
             </td>
             <td class="text-center">
-                @if (item.Contas.TipoConta == 0)
+                @if (item.Conta.TipoConta == 0)
                 {
                     <p>Conta Corrente</p>
                 }
@@ -71,7 +71,7 @@
         <tr>
         @if (Model.Count() > 0)
         {
-            <td>Saldo disponivel R$ @Model.ElementAt(0).Contas.Saldo,00</td>
+            <td>Saldo disponivel R$ @Model.ElementAt(0).Conta.Saldo,00</td>
         }
         else
         {
