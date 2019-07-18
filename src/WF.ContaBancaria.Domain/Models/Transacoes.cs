@@ -24,7 +24,7 @@ namespace WF.ContaBancaria.Domain.Models
 
         }
 
-        public double Valor { get; internal set; }
+        public double Valor { get; set; }
         public DateTime DataCadastro { get; private set; }
         public TipoTransacao TipoTransacao { get; set; }
         public Guid ContaId { get; set; }

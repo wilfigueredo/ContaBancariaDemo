@@ -2,6 +2,8 @@
 using Moq;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using TechTalk.SpecFlow;
 using WF.ContaBancaria.Domain.Interface.Repository;
 using WF.ContaBancaria.Domain.Models;
@@ -17,8 +19,9 @@ namespace WF.ContaBancaria.Domain.Teste.Contas.Service
     {
 
         Conta conta;
-        Transacoes transacao;
+        Transacoes transacao;        
         List<string> errors;
+        List<Transacoes> transacoes = new List<Transacoes>();
 
         [Given(@"Uma Conta Corrente Ativa com limite diario de (.*)")]
         public void DadoUmaContaCorrenteAtivaComLimiteDiarioDe(int p0)
@@ -39,15 +42,18 @@ namespace WF.ContaBancaria.Domain.Teste.Contas.Service
         {
             var repoConta = new Mock<IContaRepository>();
             var repoTransacao = new Mock<ITransacoesRepository>();            
-            repoConta.Setup(r => r.ObterPorId(Guid.NewGuid())).Returns(conta);
-            repoTransacao.Setup(r => r.ObterPorId(Guid.NewGuid())).Returns(transacao);
 
             transacao = new Transacoes(p0, Enuns.TipoTransacao.Saque, conta.Id);
-            transacao.Conta = conta;
+            transacao.Conta = conta;                     
+                        
+            repoTransacao.Setup(r => r.Buscar(It.IsAny<Expression<Func<Transacoes, bool>>>()))
+            .Returns<Expression<Func<Transacoes, bool>>>(pred => transacoes.Where(pred.Compile()));            
 
             var contaService = new ContaService(repoConta.Object, repoTransacao.Object);
             contaService.Sacar(conta, transacao);
-        }
+            transacao.Valor = transacao.Valor * -1;
+            transacoes.Add(transacao);
+        }       
 
         [Then(@"Receberei uma mensagem de Limite diario para saque excedido")]
         public void EntaoRecebereiUmaMensagemDeLimiteDiarioParaSaqueExcedido()
