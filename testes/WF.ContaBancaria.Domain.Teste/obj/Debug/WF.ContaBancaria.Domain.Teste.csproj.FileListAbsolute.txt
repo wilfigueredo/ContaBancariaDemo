@@ -66,3 +66,15 @@ C:\Users\wsfigueiredo\Source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Doma
 C:\Users\wsfigueiredo\Source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\obj\Debug\WF.ContaBancaria.Domain.Teste.csprojResolveAssemblyReference.cache
 C:\Users\wsfigueiredo\Source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\obj\Debug\WF.ContaBancaria.Domain.Teste.dll
 C:\Users\wsfigueiredo\Source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\obj\Debug\WF.ContaBancaria.Domain.Teste.pdb
+C:\Users\willliame\source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\bin\Debug\Castle.Core.dll
+C:\Users\willliame\source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\bin\Debug\DomainValidation.dll
+C:\Users\willliame\source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\bin\Debug\Moq.dll
+C:\Users\willliame\source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\willliame\source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\willliame\source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\bin\Debug\WF.ContaBancaria.Domain.dll
+C:\Users\willliame\source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\bin\Debug\WF.ContaBancaria.Domain.pdb
+C:\Users\willliame\source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\bin\Debug\Castle.Core.xml
+C:\Users\willliame\source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\bin\Debug\Moq.xml
+C:\Users\willliame\source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\willliame\source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\willliame\source\repos\ContaBancariaDDD\testes\WF.ContaBancaria.Domain.Teste\obj\Debug\WF.ContaBancaria.Domain.Teste.csprojAssemblyReference.cache

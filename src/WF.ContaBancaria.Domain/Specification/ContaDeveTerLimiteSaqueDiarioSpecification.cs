@@ -11,12 +11,12 @@ namespace WF.ContaBancaria.Domain.Specification
 {
     public class ContaDeveTerLimiteSaqueDiarioSpecification : ISpecification<Transacoes>
     {
-        private readonly IContaRepository _contaRepository;
+        
         private readonly ITransacoesRepository _transacoesRepository;
 
-        public ContaDeveTerLimiteSaqueDiarioSpecification(IContaRepository contaRepository, ITransacoesRepository transacoesRepository)
+        public ContaDeveTerLimiteSaqueDiarioSpecification(ITransacoesRepository transacoesRepository)
         {
-            _contaRepository = contaRepository;
+            
             _transacoesRepository = transacoesRepository;
         }
         public bool IsSatisfiedBy(Transacoes transacoes)
@@ -27,9 +27,8 @@ namespace WF.ContaBancaria.Domain.Specification
                 && t.DataCadastro.Day == transacoes.DataCadastro.Day
                 && (int)t.TipoTransacao == 1).Sum(t => t.Valor);
             
-            var conta = _contaRepository.ObterPorId(transacoes.ContaId);
-
-            return conta.LimiteSaqueDiario >= (transacoesDoDia * -1) + transacoes.Valor;
+            var limiteDiario = transacoes.Conta.LimiteSaqueDiario;
+            return limiteDiario >= (transacoesDoDia * -1) + transacoes.Valor;
         }
     }
 }

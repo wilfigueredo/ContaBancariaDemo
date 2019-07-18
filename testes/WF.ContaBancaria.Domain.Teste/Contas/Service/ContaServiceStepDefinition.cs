@@ -30,7 +30,7 @@ namespace WF.ContaBancaria.Domain.Teste.Contas.Service
         [Given(@"Uma Conta Corrente Ativa com limite diario de (.*) e saldo de (.*)")]
         public void DadoUmaContaCorrenteAtivaComLimiteDiarioDeESaldoDe(int p0, int p1)
         {
-            conta = new Conta(p0, p1);
+            conta = new Conta(p1, p0);
             conta.Ativar();
         }
 
@@ -43,10 +43,10 @@ namespace WF.ContaBancaria.Domain.Teste.Contas.Service
             repoTransacao.Setup(r => r.ObterPorId(Guid.NewGuid())).Returns(transacao);
 
             transacao = new Transacoes(p0, Enuns.TipoTransacao.Saque, conta.Id);
+            transacao.Conta = conta;
 
-            conta.ValidationResult = 
-                new SaqueEstaConsistenteValidation(repoConta.Object, repoTransacao.Object).Validate(transacao);
-                       
+            var contaService = new ContaService(repoConta.Object, repoTransacao.Object);
+            contaService.Sacar(conta, transacao);
         }
 
         [Then(@"Receberei uma mensagem de Limite diario para saque excedido")]

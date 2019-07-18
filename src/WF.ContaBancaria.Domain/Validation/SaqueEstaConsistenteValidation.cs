@@ -14,7 +14,7 @@ namespace WF.ContaBancaria.Domain.Validation
     {
         public SaqueEstaConsistenteValidation(IContaRepository contaRepository,ITransacoesRepository transacoesRepository)
         {
-            var contaLimiteDiario = new ContaDeveTerLimiteSaqueDiarioSpecification(contaRepository, transacoesRepository);
+            var contaLimiteDiario = new ContaDeveTerLimiteSaqueDiarioSpecification(transacoesRepository);
             var contaSaldo = new ContaDeveTerSaldoParaSaqueSpecification(contaRepository);            
 
             base.Add("contaLimiteDiario", new Rule<Transacoes>(contaLimiteDiario, "Limite diario para saque excedido"));

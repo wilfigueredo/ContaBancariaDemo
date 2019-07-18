@@ -20,7 +20,7 @@ namespace WF.ContaBancaria.Domain.Specification
 
         public bool IsSatisfiedBy(Transacoes transacoes)
         {
-            return _contaRepository.ObterPorId(transacoes.ContaId).Saldo >= transacoes.Valor;
+            return transacoes.Conta.Saldo >= 0;
         }
     }
 }

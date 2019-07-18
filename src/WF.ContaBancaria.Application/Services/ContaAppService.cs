@@ -78,7 +78,7 @@ namespace WF.ContaBancaria.Application.Services
             var conta = _contaRepository.ObterPorId(saqueViewModel.Id);
             
             Transacoes transacoes = new Transacoes(saqueViewModel.ValorSaque,TipoTransacao.Saque,conta.Id);
-             
+            transacoes.Conta = conta;  
             var contaRet = _contaService.Sacar(conta,transacoes);
             saqueViewModel = Mapper.Map<SaqueViewModel>(contaRet);
             if (contaRet.ValidationResult.IsValid) {                 
